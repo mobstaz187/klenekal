@@ -1,40 +1,36 @@
-#wrapper {
-    margin: 0 auto;
-    }
-body { 
+
+main {
+    display: flex;
     
+  }
+
+html,body,section,.Foreground_klenek { 
     margin: 0 auto;   /* Remove body margins */
     overflow-x: hidden;
+    width: 100%;
+    height: 100%;
 }
-    section{
-    position:relative;
+section{
+position:absolute;
+width:100%;
+height:100%;
+background-image: url("./img/BGBlink.png");
+background-repeat:no-repeat;
+background-size: 100% 100%;
 
-    height: 100vh;
-    background-image: url("./img/BGBG.PNG");
-    background-repeat:no-repeat;
-    background-size:cover;
-    
+}
+p{
+    position:fixed;
 }
 .Foreground_klenek{
     position:relative;
-    opacity: 1;
+    opacity:1;
+    width:100%;
     height: 100%;
-    width: 100%;
-    background-image: url("./img/BG.png");
+    z-index: 10;
+    background-image: url(./img/BG.PNG);
     background-repeat:no-repeat;
-    z-index: 10;
-    background-size:cover;
-    
-}
-.btn{
-    display: inline-block;
-    position:absolute;
-    opacity: 0;
-    width: 67%;
-    margin-left:27%;
-    margin-top:-24%;
-    z-index: 10;
-    
+    background-size: 100% 100%;
 }
 
 /*.Foreground_klenek:hover {
@@ -44,23 +40,22 @@ body {
                     drop-shadow(-1px -1px 0 black);
 }*/
 .glow{
-display: inline-block;
-position:absolute;
-width: 40px;
-height: 70px;
-margin-left:490px;
-margin-top:520px;
-padding-left: 900px;
-border-radius: 10%;
-background-color: #fff;
-
-box-shadow:
-    0 0 40px 10px #fff,  /* inner white */
-    0 0 50px 20px rgb(255, 255, 255), /* middle magenta */
-    0 0 60px 30px #0ff; /* outer cyan */
+    position:relative;
+    width: 40%;
+    height: 10%;
+    left:10%;
+    top:250px;
+    padding-left: 900px;
+    border-radius: 10%;
+    background-color: #fff;
+    z-index: 10;
+    box-shadow:
+        0 0 40px 10px #fff,  /* inner white */
+        0 0 50px 20px rgb(255, 255, 255), /* middle magenta */
+        0 0 60px 30px #0ff; /* outer cyan */
 }
 .blink {
-    position:absolute;
+    
     animation: flicker 3s linear infinite;
         }
 
@@ -101,20 +96,18 @@ header h4{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #c7c7c7;
+    /*background-color: #161616;*/
+    background-image:url("./img/epic-rick-and-morty.gif");
+    background-repeat:no-repeat;
+    background-size:cover;
     transition: 1s;
-}
-.bgdoctor{
-    margin-top: 418px;
-    left:-10000px;
-    height:50%;
 }
 .logo-header{
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
-    color:#353434;
+    color:#ffffff;
 }
 .logo{
     position: relative;
@@ -132,68 +125,4 @@ header h4{
     bottom: 150px;
     opacity: 0;
     transition: ease-in-out 0.5s;
-}
-#breathing-button {
-    width: 80%;
-    align-items: center;
-    padding-top: 110px;
-    margin: 50px auto;
-    border: 1px solid #161616;
-    -webkit-animation: breathing 7s ease-out infinite normal;
-    animation: breathing 7s ease-out infinite normal;
-    font-size: 16px;
-    background: #161616;
-    color: #161616;
-    -webkit-font-smoothing: antialiased;
-    border-radius: 0px;
-    text-align: center;    
-    }
-
-
-@-webkit-keyframes breathing {
-    0% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-
-    25% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    }
-
-    60% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-
-    100% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-}
-
-@keyframes breathing {
-    0% {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-
-    25% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    }
-
-    60% {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-    }
-
-    100% {
-    -webkit-transform: scale(0.95);
-    -ms-transform: scale(0.95);
-    transform: scale(0.95);
-    }
 }
